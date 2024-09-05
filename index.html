@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="sr-only">Tip Calculator</h1>
+      <img src="./images/logo.svg" alt="" />
+    </header>
+    <main>
+      <article class="card">
+        <!-- LEFT SIDE -->
+        <div class="calculator">
+          <!-- BILL -->
+          <div class="formGroup input-container">
+            <div>
+              <label for="bill">Bill</label>
+              <p aria-live="polite" class="error"></p>
+            </div>
+            <div>
+              <img class="" src="./images/icon-dollar.svg" alt="" />
+              <input
+                id="bill"
+                type="number"
+                placeholder="0"
+                inputmode="decimal"
+              />
+            </div>
+          </div>
+
+          <!-- SELECT TIP -->
+          <div>
+            <p>Select Tip %</p>
+            <!-- TIP AMOUNT GRID -->
+            <div class="grid">
+              <!-- 5% -->
+              <label class="grid-item radio-btn">
+                <input type="radio" name="tipAmount" value="5" />
+                <p>5%</p>
+              </label>
+
+              <!-- 10% -->
+              <label class="grid-item radio-btn">
+                <input type="radio" name="tipAmount" value="10" />
+                <p>10%</p>
+              </label>
+
+              <!-- 15% -->
+              <label class="grid-item radio-btn">
+                <input type="radio" name="tipAmount" value="15" />
+                <p>15%</p>
+              </label>
+
+              <!-- 25% -->
+              <label class="grid-item radio-btn">
+                <input type="radio" name="tipAmount" value="25" />
+                <p>25%</p>
+              </label>
+
+              <!-- 50% -->
+              <label class="grid-item radio-btn">
+                <input type="radio" name="tipAmount" value="50" />
+                <p>50%</p>
+              </label>
+
+              <!-- CUSTOM AMOUNT -->
+              <div class="grid-item">
+                <label class="grid-item radio-btn">
+                  <input type="radio" name="tipAmount" />
+                  <p>Custom</p>
+                </label>
+                <input type="number" id="customAmount" />
+              </div>
+            </div>
+          </div>
+
+          <!-- NUMBER OF PEOPLE -->
+          <div class="formGroup input-container">
+            <div>
+              <label for="numOfPeople">Number of People</label>
+              <p aria-live="polite" class="error"></p>
+            </div>
+            <div>
+              <img class="" src="./images/icon-person.svg" alt="" />
+              <input id="numOfPeople" type="number" placeholder="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="results">
+          <div>
+            <p>Tip Amount<span>/ person</span></p>
+            <p id="tipPerPerson"></p>
+          </div>
+          <div>
+            <p>Total<span>/ person</span></p>
+            <p id="totalPerPerson"></p>
+          </div>
+          <button id="resetButton">Reset</button>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
